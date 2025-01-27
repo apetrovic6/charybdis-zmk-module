@@ -6,11 +6,11 @@
         zmk,physical-layout = &charybdis_5col_layout;
     };
 
-    &charybdis_5col_layout {
+    charybdis_5col_layout {
         transform = <&five_column_transform>;
     };
 
-    &charybdis_6col_layout {
+    charybdis_6col_layout {
         transform = <&default_transform>;
     };
 
