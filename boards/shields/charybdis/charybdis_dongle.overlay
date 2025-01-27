@@ -4,10 +4,6 @@
     transform = <&five_column_transform>;
 };
 
-&charybdis_6col_layout {
-    transform = <&default_transform>;
-};
-
 / {
     chosen {
         zmk,kscan = &mock_kscan;
