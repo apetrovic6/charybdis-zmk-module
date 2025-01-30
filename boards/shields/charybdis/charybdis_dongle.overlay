@@ -1,4 +1,10 @@
 #include "charybdis.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
+
+
+&charybdis_5col_layout {
+    transform = <&default_tranform>;
+};
 
 &charybdis_5col_layout{
     transform = <&five_column_transform>;
@@ -10,7 +16,7 @@
         zmk,physical-layout = &charybdis_5col_layout;
     };
 
-    mock_kscan: kscan_1 {
+    mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
