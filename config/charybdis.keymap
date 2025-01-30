@@ -61,20 +61,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        KP_Z {
-            bindings = <&kp Z>;
-            key-positions = <0 1>;
-        };
-
-        KP_Q {
-            bindings = <&kp Q>;
-            key-positions = <1 2>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -169,6 +155,17 @@
 
   combos {
         compatible = "zmk,combos";
+
+   KP_Z {
+              bindings = <&kp Z>;
+              key-positions = <0 1>;
+          };
+
+          KP_Q {
+              bindings = <&kp Q>;
+              key-positions = <1 2>;
+          };
+
 
         c_bps {
             timeout-ms = <50>;
