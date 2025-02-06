@@ -7,14 +7,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 endif
-
-if SHIELD_CHARYBDIS_DONGLE || SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
-
-config ZMK_SPLIT
-	default y
-	
-endif
-
 if ZMK_DISPLAY
 
 config I2C
@@ -45,3 +37,11 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif
+
+if SHIELD_CHARYBDIS_DONGLE || SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
+
+config ZMK_SPLIT
+	default y
+	
+endif
+
