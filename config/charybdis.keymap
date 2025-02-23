@@ -77,6 +77,15 @@
         };
     };
 
+    macros {
+        Debug_FMT: Debug_FMT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DQT &kp RBKT &kp COLON &kp QMARK &kp RBRC &kp DQT>;
+            label = "DEBUG_FMT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -113,10 +122,10 @@
         prog_sym_layer {
             display-name = "Prog Sym";
             bindings = <
-  &DBL_EQL  &TRPL_EQL  &NOT_EQL  &GT_EQL  &trans    &trans  &LOG_AND   &LOG_OR    &INCLUDE    &trans
-  &PRN      &BRC       &BKT      &ANGL    &trans    &trans  &ARROW_OP  &ARROW_FN  &DBL_QT     &trans
-  &DEC      &INC       &trans    &trans   &trans    &trans  &LSFT_OP   &RSFT_OP   &UPROPERTY  &UFUNCTION
-                       &trans    &trans   &trans    &trans  &trans
+  &DBL_EQL  &TRPL_EQL  &NOT_EQL  &GT_EQL  &Debug_FMT    &trans  &LOG_AND   &LOG_OR    &INCLUDE    &trans
+  &PRN      &BRC       &BKT      &ANGL    &trans        &trans  &ARROW_OP  &ARROW_FN  &DBL_QT     &trans
+  &DEC      &INC       &trans    &trans   &trans        &trans  &LSFT_OP   &RSFT_OP   &UPROPERTY  &UFUNCTION
+                       &trans    &trans   &trans        &trans  &trans
             >;
         };
 
