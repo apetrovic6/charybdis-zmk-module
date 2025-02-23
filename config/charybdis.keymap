@@ -81,7 +81,7 @@
         Debug_FMT: Debug_FMT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DQT &kp RBKT &kp COLON &kp QMARK &kp RBRC &kp DQT>;
+            bindings = <&kp DQT &kp LEFT_BRACE &kp COLON &kp QMARK &kp RBRC &kp DQT>;
             label = "DEBUG_FMT";
         };
     };
