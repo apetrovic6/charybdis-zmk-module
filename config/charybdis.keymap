@@ -81,8 +81,15 @@
         Debug_FMT: Debug_FMT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp LEFT_BRACE &kp COLON &kp QMARK &kp RBRC &kp DQT>;
+            bindings = <&kp LEFT_BRACE &kp COLON &kp QMARK &kp RBRC>;
             label = "DEBUG_FMT";
+        };
+
+        debug_FMT_pretty: debug_FMT_pretty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp COLON &kp POUND &kp QMARK &kp RBRC>;
+            label = "DEBUG_FMT_PRETTY";
         };
     };
 
