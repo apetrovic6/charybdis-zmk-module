@@ -91,6 +91,27 @@
             bindings = <&kp LEFT_BRACE &kp COLON &kp POUND &kp QMARK &kp RBRC>;
             label = "DEBUG_FMT_PRETTY";
         };
+
+        derive_macro: derive {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp POUND &kp LBKT &kp D &kp E &kp R &kp I &kp V &kp E &kp LPAR &kp RPAR &kp RIGHT_BRACKET &kp LEFT &kp LEFT>;
+            label = "DERIVE";
+        };
+
+        component_macro: component_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp POUND &kp LBKT &kp C &kp O &kp M &kp P &kp O &kp N &kp E &kp N &kp T &kp RIGHT_BRACKET &kp RETURN>;
+            label = "COMPONENT_MACRO";
+        };
+
+        lt_eq: lt_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL &kp SPACE>;
+            label = "LT_EQ";
+        };
     };
 
     keymap {
@@ -129,10 +150,10 @@
         prog_sym_layer {
             display-name = "Prog Sym";
             bindings = <
-  &DBL_EQL  &TRPL_EQL  &NOT_EQL  &GT_EQL  &Debug_FMT    &trans  &LOG_AND   &LOG_OR    &INCLUDE    &trans
-  &PRN      &BRC       &BKT      &ANGL    &trans        &trans  &ARROW_OP  &ARROW_FN  &DBL_QT     &trans
-  &DEC      &INC       &trans    &trans   &trans        &trans  &LSFT_OP   &RSFT_OP   &UPROPERTY  &UFUNCTION
-                       &trans    &trans   &trans        &trans  &trans
+  &DBL_EQL  &TRPL_EQL  &NOT_EQL       &GT_EQL           &lt_eq               &trans  &LOG_AND   &LOG_OR    &INCLUDE    &trans
+  &PRN      &BRC       &BKT           &ANGL             &Debug_FMT           &trans  &ARROW_OP  &ARROW_FN  &DBL_QT     &trans
+  &DEC      &INC       &derive_macro  &component_macro  &debug_FMT_pretty    &trans  &LSFT_OP   &RSFT_OP   &UPROPERTY  &UFUNCTION
+                       &trans         &trans            &trans               &trans  &trans
             >;
         };
 
